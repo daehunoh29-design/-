@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/workspaces/-/spatial-audio-wired-earphones-demo/build",
+  "command": "/usr/bin/c++ -DNDEBUG -I/workspaces/-/spatial-audio-wired-earphones-demo/include -isystem /usr/include/AL -std=gnu++17 -o CMakeFiles/spatial_audio_demo.dir/src/main.cpp.o -c /workspaces/-/spatial-audio-wired-earphones-demo/src/main.cpp",
+  "file": "/workspaces/-/spatial-audio-wired-earphones-demo/src/main.cpp",
+  "output": "CMakeFiles/spatial_audio_demo.dir/src/main.cpp.o"
+},
+{
+  "directory": "/workspaces/-/spatial-audio-wired-earphones-demo/build",
+  "command": "/usr/bin/c++ -DNDEBUG -I/workspaces/-/spatial-audio-wired-earphones-demo/include -isystem /usr/include/AL -std=gnu++17 -o CMakeFiles/spatial_audio_demo.dir/src/SpatialDemo.cpp.o -c /workspaces/-/spatial-audio-wired-earphones-demo/src/SpatialDemo.cpp",
+  "file": "/workspaces/-/spatial-audio-wired-earphones-demo/src/SpatialDemo.cpp",
+  "output": "CMakeFiles/spatial_audio_demo.dir/src/SpatialDemo.cpp.o"
+},
+{
+  "directory": "/workspaces/-/spatial-audio-wired-earphones-demo/build",
+  "command": "/usr/bin/c++ -DNDEBUG -I/workspaces/-/spatial-audio-wired-earphones-demo/include -isystem /usr/include/AL -std=gnu++17 -o CMakeFiles/spatial_audio_demo.dir/src/AudioDevice.cpp.o -c /workspaces/-/spatial-audio-wired-earphones-demo/src/AudioDevice.cpp",
+  "file": "/workspaces/-/spatial-audio-wired-earphones-demo/src/AudioDevice.cpp",
+  "output": "CMakeFiles/spatial_audio_demo.dir/src/AudioDevice.cpp.o"
+},
+{
+  "directory": "/workspaces/-/spatial-audio-wired-earphones-demo/build",
+  "command": "/usr/bin/c++ -DNDEBUG -I/workspaces/-/spatial-audio-wired-earphones-demo/include -isystem /usr/include/AL -std=gnu++17 -o CMakeFiles/spatial_audio_demo.dir/src/DemoConfig.cpp.o -c /workspaces/-/spatial-audio-wired-earphones-demo/src/DemoConfig.cpp",
+  "file": "/workspaces/-/spatial-audio-wired-earphones-demo/src/DemoConfig.cpp",
+  "output": "CMakeFiles/spatial_audio_demo.dir/src/DemoConfig.cpp.o"
+}
+]

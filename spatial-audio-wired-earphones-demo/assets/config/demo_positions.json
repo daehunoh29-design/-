@@ -1,0 +1,8 @@
+[
+  {"name": "front", "azimuth": 0, "distance": 1.0, "wav": "assets/audio/front.wav"},
+  {"name": "front_left", "azimuth": 45, "distance": 1.0, "wav": "assets/audio/front_left.wav"},
+  {"name": "front_right", "azimuth": -45, "distance": 1.0, "wav": "assets/audio/front_right.wav"},
+  {"name": "left", "azimuth": 90, "distance": 1.0, "wav": "assets/audio/left.wav"},
+  {"name": "right", "azimuth": -90, "distance": 1.0, "wav": "assets/audio/right.wav"},
+  {"name": "back", "azimuth": 180, "distance": 1.0, "wav": "assets/audio/back.wav"}
+]
