@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>공간 음향 탑뷰</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="stage-panel" aria-label="공간 음향 탑뷰 맵">
+        <div class="toolbar">
+          <div>
+            <h1>공간 음향 탑뷰</h1>
+            <p id="positionReadout">0.0도 · 1.00m</p>
+          </div>
+          <div class="tool-actions">
+            <button id="replayButton" class="icon-button" type="button" title="다시 재생" aria-label="다시 재생">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v4H4" />
+                <path d="M5.5 13a6.5 6.5 0 1 0 2-4.7L4 9" />
+              </svg>
+            </button>
+            <button id="centerButton" class="icon-button" type="button" title="중앙" aria-label="중앙">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <canvas id="roomCanvas" width="1200" height="860" aria-label="방 맵"></canvas>
+      </section>
+
+      <aside class="control-panel" aria-label="공간 음향 컨트롤">
+        <div class="meter-group">
+          <span>방위각</span>
+          <strong id="azimuthValue">0.0°</strong>
+        </div>
+        <div class="meter-group">
+          <span>거리</span>
+          <strong id="distanceValue">1.00m</strong>
+        </div>
+        <label class="select-row">
+          <span>사운드</span>
+          <select id="soundSelect">
+            <option value="beep">비프</option>
+            <option value="front">앞</option>
+            <option value="front_left">왼쪽 앞</option>
+            <option value="front_right">오른쪽 앞</option>
+            <option value="left">왼쪽</option>
+            <option value="right">오른쪽</option>
+            <option value="back">뒤</option>
+          </select>
+        </label>
+        <div class="status-box">
+          <span id="statusDot"></span>
+          <p id="statusText">준비</p>
+        </div>
+      </aside>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

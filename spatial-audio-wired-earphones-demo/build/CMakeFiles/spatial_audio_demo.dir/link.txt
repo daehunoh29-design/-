@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/spatial_audio_demo.dir/src/main.cpp.o CMakeFiles/spatial_audio_demo.dir/src/SpatialDemo.cpp.o CMakeFiles/spatial_audio_demo.dir/src/AudioDevice.cpp.o CMakeFiles/spatial_audio_demo.dir/src/DemoConfig.cpp.o -o spatial_audio_demo  /usr/lib/x86_64-linux-gnu/libopenal.so /usr/lib/x86_64-linux-gnu/libsndfile.so 

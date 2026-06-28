@@ -1,0 +1,250 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f7f6;
+  --ink: #17211f;
+  --muted: #66706c;
+  --line: #cad4cf;
+  --panel: #ffffff;
+  --teal: #16827a;
+  --coral: #e45d43;
+  --amber: #d49a24;
+  --blue: #3e6da8;
+  --shadow: 0 18px 55px rgba(20, 32, 29, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(22, 130, 122, 0.08), transparent 34%),
+    linear-gradient(315deg, rgba(228, 93, 67, 0.08), transparent 30%),
+    var(--bg);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 18px;
+  width: min(1360px, calc(100vw - 28px));
+  height: calc(100vh - 28px);
+  margin: 14px auto;
+}
+
+.stage-panel,
+.control-panel {
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--shadow);
+}
+
+.stage-panel {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  padding: 16px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.1rem, 1.8vw, 1.65rem);
+  line-height: 1.15;
+  font-weight: 760;
+}
+
+.toolbar p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.tool-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+.icon-button svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+#roomCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #eef3f0;
+  cursor: crosshair;
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+}
+
+.meter-group,
+.select-row,
+.status-box {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.meter-group {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px;
+}
+
+.meter-group span,
+.select-row span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.meter-group strong {
+  font-size: 1.35rem;
+  color: var(--teal);
+}
+
+.select-row {
+  display: grid;
+  gap: 9px;
+  padding: 14px;
+}
+
+select {
+  width: 100%;
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  padding: 0 10px;
+}
+
+.status-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px;
+  margin-top: auto;
+  padding: 12px 14px;
+}
+
+#statusDot {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  border-radius: 999px;
+  background: var(--teal);
+  box-shadow: 0 0 0 4px rgba(22, 130, 122, 0.12);
+}
+
+#statusDot.busy {
+  background: var(--amber);
+  box-shadow: 0 0 0 4px rgba(212, 154, 36, 0.16);
+}
+
+#statusDot.error {
+  background: var(--coral);
+  box-shadow: 0 0 0 4px rgba(228, 93, 67, 0.14);
+}
+
+.status-box p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 860px) {
+  body {
+    overflow: auto;
+  }
+
+  .app-shell {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: calc(100vh - 24px);
+    width: min(100vw - 24px, 720px);
+    margin: 12px auto;
+  }
+
+  .stage-panel {
+    min-height: 68vh;
+  }
+
+  .control-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .select-row,
+  .status-box {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .toolbar {
+    align-items: flex-start;
+  }
+
+  .control-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .stage-panel {
+    padding: 12px;
+  }
+}

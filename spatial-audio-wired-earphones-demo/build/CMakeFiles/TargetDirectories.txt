@@ -1,3 +1,0 @@
-/workspaces/-/spatial-audio-wired-earphones-demo/build/CMakeFiles/spatial_audio_demo.dir
-/workspaces/-/spatial-audio-wired-earphones-demo/build/CMakeFiles/edit_cache.dir
-/workspaces/-/spatial-audio-wired-earphones-demo/build/CMakeFiles/rebuild_cache.dir

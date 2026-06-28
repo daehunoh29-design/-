@@ -1,0 +1,3 @@
+numpy>=1.24
+sounddevice>=0.4.6
+pyroomacoustics>=0.7.4
